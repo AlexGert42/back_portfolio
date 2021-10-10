@@ -9,11 +9,14 @@ app.use(cors())
 
 app.use(bodyParser.json())
 
+let _login = process.env.SMTP_LOGIN
+let _password = process.env.SMTP_PASSWORD
+
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'aleeex.gerttt@gmail.com',
-        pass: 'shitPassword',
+        user: _login,
+        pass: _password,
     },
 });
 
@@ -38,7 +41,10 @@ app.post('/message', async function (req, res) {
 
 })
 
-app.listen(3010, function () {
+
+let port =  process.env.PORT || 3010
+
+app.listen(port, function () {
     console.log('WORK')
 })
 
