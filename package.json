@@ -1,0 +1,14 @@
+{
+  "name": "back_portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "alex_gert_42",
+  "license": "MIT",
+  "private": "true",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.5"
+  }
+}
