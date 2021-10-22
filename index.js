@@ -9,8 +9,8 @@ app.use(cors())
 
 app.use(bodyParser.json())
 
-let _login = process.env.SMTP_LOGIN
-let _password = process.env.SMTP_PASSWORD
+let _login = process.env.LOGIN
+let _password = process.env.PASSWORD
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
